@@ -29,6 +29,8 @@ make -C $BUILDROOT
 # to our "output" directory in top level directory 
 #
 
+# Create output directory
+mkdir output
 # initramfs file build by buildroot containing the root file system
 cp $BUILDROOT/output/images/rootfs.cpio.xz output/scriptexecute.img
 # Linux kernel
@@ -37,6 +39,8 @@ cp $BUILDROOT/output/images/zImage output/kernel.img
 cp $BUILDROOT/output/images/rpi-firmware/*.elf output
 cp $BUILDROOT/output/images/rpi-firmware/*.dat output
 cp $BUILDROOT/output/images/*.dtb output
+# Boot config files
+cp scriptexecute/boot-configs/* output
 
 # Uncomment if using dwc2
 mkdir -p output/overlays
