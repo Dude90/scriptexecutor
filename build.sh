@@ -36,7 +36,6 @@ cp $BUILDROOT/output/images/zImage output/kernel.img
 # Raspberry Pi firmware files
 cp $BUILDROOT/output/images/rpi-firmware/*.elf output
 cp $BUILDROOT/output/images/rpi-firmware/*.dat output
-cp $BUILDROOT/output/images/rpi-firmware/bootcode.bin output
 cp $BUILDROOT/output/images/*.dtb output
 
 # Uncomment if using dwc2
