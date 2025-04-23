@@ -12,8 +12,8 @@ case "$1" in
 	SERIAL=`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
 	MODEL=`cat /proc/device-tree/model`
 	MODEL_ESCAPED="${MODEL// /+}"
-	TEMP=`vcgencmd measure_temp`
-	TEMP=${TEMP:5}
+	TEMP=`cat /sys/class/thermal/thermal_zone0/temp`
+	TEMP=$((TEMP/1000))
 
 	#
 	# Parse kernel cmdline options (cmdline.txt)
