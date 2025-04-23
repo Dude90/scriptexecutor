@@ -2,7 +2,7 @@
 
 BUILDROOT=buildroot-2025.02
 # Supported targets: cmhybrid (supports cm1 cm3), cm4
-TARGET=cm4
+TARGET=cm5
 
 #
 # Extract the tarball containing the unmodified buildroot version 
@@ -34,7 +34,7 @@ mkdir output
 # initramfs file build by buildroot containing the root file system
 cp $BUILDROOT/output/images/rootfs.cpio.xz output/scriptexecute.img
 # Linux kernel
-cp $BUILDROOT/output/images/zImage output/kernel.img
+cp $BUILDROOT/output/images/Image output/kernel_2712.img
 # Raspberry Pi firmware files
 cp $BUILDROOT/output/images/rpi-firmware/*.elf output
 cp $BUILDROOT/output/images/rpi-firmware/*.dat output
