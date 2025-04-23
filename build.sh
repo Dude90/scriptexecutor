@@ -22,7 +22,7 @@ fi
 #
 # Build everything
 #
-make -C $BUILDROOT
+FORCE_UNSAFE_CONFIGURATION=1 make -C $BUILDROOT
 
 #
 # Copy the files we are interested in from buildroot's "output/images" directory
